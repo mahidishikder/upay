@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  
+  <main class="flex justify-center mt-10">
+ <!-- Phone Mokuq -->
+ <div class="mockup-phone">
+  <div class="camera"></div>
+  <div class="display">
+    <div class="artboard artboard-demo phone-3">
+      <!-- Account Money -->
+      <div class="stats shadow">
+        <div class="stat">
+          <div class="stat-title text-lg font-bold">Total Amount</div>
+          <div id="total-amount" class="stat-value text-green-600">40000</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <!--button-->
+      <div class="flex">
+        <button id="btn-add-money-1" class="btn btn-lg bg-sky-300">Add Money</button>
+        <button id="btn-cash-out-2" class="btn btn-lg bg-red-400">Cash Out</button>
+        <button id="btn-transection-3" class="btn btn-lg bg-blue-300  mx-auto">Transection</button>
+
+      </div>
+      <!-- Add Money form -->
+      <div id="add-money-form" class="hidden mt-10 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Add Money</span>
+            </label>
+            <!-- add money input -->
+            <input id="input-add-money" type="text" placeholder="Amount" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Pin</span>
+            </label>
+            <!-- pin input -->
+            <input id="input-pin-number" type="password" placeholder="Your Pin" class="input input-bordered" required />
+            
+          </div>
+          <div class="form-control mt-6">
+            <button id="btn-add-money" class="btn btn-primary">Add Money</button>
+          </div>
+        </form>
+      </div>
+      <!-- cash out -->
+      <div id="cash-out-form" class="hidden mt-10 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Cash Out</span>
+            </label>
+            <!-- add money input -->
+            <input id="input-cash-out" type="text" placeholder="Amount" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Pin</span>
+            </label>
+            <!-- pin input -->
+            <input id="input-pin-number2" type="password" placeholder="Your Pin" class="input input-bordered" required />
+            
+          </div>
+          <div class="form-control mt-6">
+            <button id="btn-cash-out" class="btn btn-primary">Add Money</button>
+          </div>
+        </form>
+      </div>
+      <!--Transection -->
+      <div class="hidden" id="transection-history">
+        <h2 class="text-4xl font-bold mb-5">Transection History</h2>
+        <div class="space-y-3" id="transection-container">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<script src="utilities.js"></script>
+<script src="addMoney.js"></script>
+<script src="cashOut.js"></script>
+<script src="features.js"></script>
 </body>
 </html>
